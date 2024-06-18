@@ -1,12 +1,14 @@
 // Online Java Compiler
 // Use this editor to write, compile and run your Java code online
 
+//class creation
 class LL{
-    Node head;
+    Node head; 
+//class of Node creation
     class Node{
         String data;
         Node next;
-        
+        //constr of node
         Node(String data){
             this.data=data;
             this.next = next;
