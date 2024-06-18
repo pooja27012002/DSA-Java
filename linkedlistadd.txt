@@ -1,0 +1,65 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class LL{
+    Node head;
+    class Node{
+        String data;
+        Node next;
+        
+        Node(String data){
+            this.data=data;
+            this.next = next;
+        }
+    }
+    
+    //add first last
+       //funct
+       public void addFirst(String data){
+           Node newNode = new Node(data);//creation of new node
+           if(head == null){
+               head = newNode;
+               return;
+           }
+           newNode.next = head;
+           head = newNode;
+       }
+       public void addLast(String data){
+           Node newNode = new Node(data);//creation of new node
+           if(head == null){
+               head = newNode;
+               return;
+           }
+           Node currNode = head;
+           while(currNode.next !=null){
+               currNode= currNode.next;
+               
+           }
+           currNode.next= newNode;
+       }
+       public void printList(){
+           if(head == null){
+              System.out.println("List is empty"); 
+              return; 
+           }
+           Node currNode = head;
+           while(currNode != null){
+              System.out.print(currNode.data+"-> ");
+              currNode = currNode.next;
+           }
+           System.out.println("Null");
+       }
+       
+    public static void main(String args[]){
+        LL l1 = new LL();
+        l1.addFirst("a");
+        l1.addFirst("is");
+        l1.printList();
+        
+        l1.addLast("list");
+         l1.printList();
+         
+         l1.addFirst("this");
+          l1.printList();
+    }
+}
